@@ -162,13 +162,18 @@ function BoxGrid({ children }) {
   return <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] items-start gap-6">{children}</div>
 }
 
-function Box({ title, children, small, index = 0 }) {
+function Box({ title, children, small, href, index = 0 }) {
   return (
     <Reveal delay={index * 90}>
       <div className={`border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-accent ${glow}`}>
         <h3 className="border-b border-line px-3 py-1.5 text-base font-semibold text-strong">{title}</h3>
         <p className="px-3 py-2 text-[15px]">{children}</p>
         {small && <small className="block px-3 pb-2.5 text-[13px]">{small}</small>}
+        {href && (
+          <a href={href} target="_blank" rel="noopener noreferrer" className="block border-t border-line px-3 py-2 text-sm text-accent transition-colors hover:text-strong">
+            View certificate ↗
+          </a>
+        )}
       </div>
     </Reveal>
   )
@@ -199,7 +204,7 @@ export default function App() {
 
         <Section id="certifications" title="certifications">
           <BoxGrid>
-            {certifications.map((c, i) => <Box key={c.title} index={i} title={c.title} small={c.date}>{c.issuer}</Box>)}
+            {certifications.map((c, i) => <Box key={c.title} index={i} title={c.title} small={c.date} href={c.href}>{c.issuer}</Box>)}
           </BoxGrid>
         </Section>
 

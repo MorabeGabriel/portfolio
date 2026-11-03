@@ -82,10 +82,11 @@ export const skills = [
 ]
 
 export const certifications = [
-  { title: 'CCNA: Introduction to Networks', issuer: 'Cisco Networking Academy (CICT, HAU)', date: 'Jun 2025' },
-  { title: 'AI Fundamentals with IBM SkillsBuild', issuer: 'Cisco Networking Academy / IBM', date: 'Feb 2026' },
-  { title: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy (HAU School of Computing)', date: 'Mar 2026' },
-  { title: 'Legacy Responsive Web Design V8', issuer: 'freeCodeCamp, about 300 hours', date: 'Sep 2024' },
+  { title: 'Builds Full-Stack JavaScript and AI', issuer: 'Holy Angel University, School of Computing', date: 'Nov 2026', href: 'https://tjakoen.github.io/b/1f355428f4a01ba6' },
+  { title: 'CCNA: Introduction to Networks', issuer: 'Cisco Networking Academy (CICT, HAU)', date: 'Jun 2025', href: 'https://www.credly.com/users/gabriel-morabe/badges' },
+  { title: 'AI Fundamentals with IBM SkillsBuild', issuer: 'Cisco Networking Academy / IBM', date: 'Feb 2026', href: 'https://www.credly.com/users/gabriel-morabe/badges' },
+  { title: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy (HAU School of Computing)', date: 'Mar 2026', href: 'https://www.credly.com/users/gabriel-morabe/badges' },
+  { title: 'Legacy Responsive Web Design V8', issuer: 'freeCodeCamp, about 300 hours', date: 'Sep 2024', href: 'https://www.freecodecamp.org/certification/morabegab/responsive-web-design' },
 ]
 
 export const education = [
