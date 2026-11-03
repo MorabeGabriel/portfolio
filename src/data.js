@@ -6,7 +6,7 @@ export const profile = {
   location: 'Angeles City, Pampanga',
   email: 'morabegab@gmail.com',
   github: 'https://github.com/MorabeGabriel',
-  cvUrl: 'https://drive.google.com/file/d/1rLZoEKC8-WjeeNuA0LdGmkVnXD6cMAPc/view?usp=sharing',
+  cvUrl: 'https://drive.google.com/file/d/1rLZoEKC8-WjeeNuA0LdGmkVnXD6cMAPc/view?usp=sharing', // paste a public link to your CV PDF here and a "Download CV" button appears
   intro:
     'I build full-stack web apps with React, Node.js and PostgreSQL, and I use AI tools to plan, build, test and debug them. I’m looking for an OJT placement in software or web development for my 2nd semester.',
   status: 'OJT / internship',
@@ -48,6 +48,29 @@ export const projects = [
       'Reviewed and tested the REST API end-to-end against a real PostgreSQL database, and switched setup from Docker to native PostgreSQL to fix blockers.',
     ],
     links: [{ label: 'GitHub repo', href: 'https://github.com/MorabeGabriel/shiorii' }],
+  },
+  {
+    title: 'mediGO',
+    stack: 'Flutter, Dart',
+    summary:
+      'A Flutter app for finding nearby hospitals, clinics and pharmacies in Angeles City, Pampanga. A front-end prototype that runs on phones and in the browser, using sample data.',
+    bullets: [
+      'Search by facility name, address, type or service, and filter by hospital, clinic or pharmacy, with results sorted nearest first.',
+      'Facility details show rating, distance, estimated wait, open or closed and 24-hour status, and the full list of services.',
+      'Call a facility from the phone dialer or open turn-by-turn directions in Google Maps.',
+      'Includes a login screen with form validation, and widget tests for the login, search and filter flows.',
+    ],
+    links: [{ label: 'GitHub repo', href: 'https://github.com/MorabeGabriel/medi-go' }],
+  },
+  {
+    title: 'Retro Rewind',
+    image: '/images/retro-rewind.jpg',
+    alt: 'Retro Rewind home page with a vintage Polaroid camera and the shop navigation',
+    stack: 'Web app, deployed on Vercel',
+    summary:
+      'An online shop for restored vintage cameras, turntables and cassette players.',
+    bullets: [],
+    links: [{ label: 'Live site', href: 'https://retro-rewind-iota.vercel.app', primary: true }],
   },
 ]
 

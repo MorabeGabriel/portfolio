@@ -134,16 +134,20 @@ function Hero() {
 function ProjectCard({ p }) {
   return (
     <article className={`group border border-line bg-card transition duration-300 hover:-translate-y-1 hover:border-accent ${glow}`}>
-      <div className="overflow-hidden border-b border-line">
-        <img src={p.image} alt={p.alt} className="block h-auto w-full transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" />
-      </div>
+      {p.image && (
+        <div className="overflow-hidden border-b border-line">
+          <img src={p.image} alt={p.alt} className="block h-auto w-full transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" />
+        </div>
+      )}
       <div className="border-b border-line px-3 py-1 text-sm">{p.stack}</div>
       <div className="px-3 pb-3.5 pt-4">
         <h3 className="text-2xl font-medium text-strong">{p.title}</h3>
         <p className="my-2 mb-3.5 text-[15px]">{p.summary}</p>
-        <ul className="mb-4 list-disc pl-[18px] text-sm">
-          {p.bullets.map((b) => <li key={b} className="mb-1.5">{b}</li>)}
-        </ul>
+        {p.bullets?.length > 0 && (
+          <ul className="mb-4 list-disc pl-[18px] text-sm">
+            {p.bullets.map((b) => <li key={b} className="mb-1.5">{b}</li>)}
+          </ul>
+        )}
         <div className="flex flex-wrap gap-2.5">
           {p.links.map((l) => (
             <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className={`${l.primary ? btn : ghost} ${btnSm}`}>{l.label}</a>
